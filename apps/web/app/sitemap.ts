@@ -1,5 +1,5 @@
 export default function sitemap() {
-    const baseUrl = 'https://template.com'
+    const baseUrl = 'https://fitnopolis.com'
 
     return [
         {

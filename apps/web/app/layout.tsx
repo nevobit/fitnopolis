@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import '@repo/design-system/web/styles/index.css';
+import Header from "../components/Layout/Header";
+import Footer from "../components/Layout/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -11,16 +14,16 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://prooving.com'),
+  metadataBase: new URL('https://fitnopolis.com'),
   title: {
-    default: 'Prooving - PC Gamers, Componentes y Periféricos Para Gamers',
+    default: 'Fitnopolis - Vive en movimiento',
     template:
-      '%s | Prooving - PC Gamers, Componentes y Periféricos Para Gamers',
+      '%s | Fitnopolis - Vive en movimiento',
   },
   description:
     'Construye computadoras extraordinarias con Prooving. PC para juegos premium, PC para juegos personalizados, software y otros productos relacionados con PC, todo para la comunidad gamer y de PC.',
-  applicationName: 'Prooving',
-  keywords: ['PC', 'Gamers', 'Componentes', 'Periféricos', 'Gaming'],
+  applicationName: 'Fitnopolis',
+  keywords: ['Fitness', 'Bicicletas', 'Ejercicio', 'Saludable', 'Maquinas'],
   authors: [{ name: 'Nevobit', url: 'https://nevobit.com' }],
   creator: 'Nevobit Software',
   publisher: 'Nevobit Software',
@@ -31,20 +34,20 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Prooving - PC Gamers, Componentes y Periféricos Para Gamers',
+    title: 'Fitnopolis - Vive en movimiento',
     description:
       'Construye computadoras extraordinarias con Prooving. PC para juegos premium, PC para juegos personalizados, software y otros productos relacionados con PC, todo para la comunidad gamer y de PC.',
-    url: 'https://prooving.com',
-    siteName: 'Prooving',
+    url: 'https://fitnopolis.com',
+    siteName: 'Fitnopolis',
     type: 'website',
     locale: 'es-ES',
   },
   twitter: {
-    title: 'Prooving',
+    title: 'Fitnopolis',
     description:
       'Construye computadoras extraordinarias con Prooving. PC para juegos premium, PC para juegos personalizados, software y otros productos relacionados con PC, todo para la comunidad gamer y de PC.',
     creator: '@nevobitsoftware',
-    site: 'Prooving',
+    site: 'Fitnopolis',
     card: 'summary_large_image',
   },
 };
@@ -57,9 +60,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Header />
         <main>
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
