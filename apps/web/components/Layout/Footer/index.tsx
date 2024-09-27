@@ -18,7 +18,6 @@ const Footer = () => {
       
       </div>
 
-      <Link className={styles.whatsapp}  href="https://api.whatsapp.com/send?phone=573207768383&text=Hola, me interesa un producto" title='Boton Whatsapp' ><Image src="/whatsapp.webp" width={50} height={50} alt='Boton Whatsapp' /> </Link>
     </footer>
   )
 }

@@ -68,6 +68,30 @@
   margin-top: 1rem;
 }
 
+.images{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.section_social{
+  padding-inline: 2rem;
+  margin-block: 4rem;
+}
+
+.section_social p{
+  text-align: center;
+}
+
+.products{
+  margin-top: 4rem;
+}
+
 @media screen and (min-width: 768px) {
   .video{
     display: inline-flex;
@@ -80,4 +104,9 @@
   .video_mobile{
     display: none;
   }
+
+  .categories{
+    display: flex;
+
+}
 }

@@ -1,0 +1,26 @@
+.container{
+  padding-inline: 2rem;
+}
+
+.product h3{
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+.product p{
+  font-size: 1.8rem;
+}
+
+.section{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.section > div > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

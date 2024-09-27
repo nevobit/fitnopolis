@@ -1,5 +1,4 @@
-.whatsapp{
-  position: absolute;
-  right: 2rem;
-  bottom: 2rem;
+.footer{
+  padding-inline: 2rem;
+  padding-block: 4rem;
 }
