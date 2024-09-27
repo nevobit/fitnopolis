@@ -21,7 +21,6 @@ const Home: React.FC = async() => {
 <source src="https://download.bowflex.com/video/bfx/june23/bowflex-hp-rebrand-launch-428x613.mp4" type="video/mp4" />
 </video>
         </div>
-
           <div className={styles.copy} >
         <h1>Fomenta tu amor por el movimiento</h1>
         <p>El fitness debe sentirse bien</p>
