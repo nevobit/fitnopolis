@@ -22,9 +22,9 @@ export const metadata: Metadata = {
       '%s | Fitnopolis - Vive en movimiento',
   },
   description:
-    'Construye computadoras extraordinarias con Prooving. PC para juegos premium, PC para juegos personalizados, software y otros productos relacionados con PC, todo para la comunidad gamer y de PC.',
+    'Tienda online de equipamiento deportivo y accesorios de entrenamiento para un estilo de vida activo. Vive en movimiento con Fitnopilos.',
   applicationName: 'Fitnopolis',
-  keywords: ['Fitness', 'Bicicletas', 'Ejercicio', 'Saludable', 'Maquinas'],
+  keywords: ['Fitness', 'Bicicletas', 'Ejercicio', 'Saludable', 'Maquinas', 'Deportes', 'Equipamiento para gimnasio'],
   authors: [{ name: 'Nevobit', url: 'https://nevobit.com' }],
   creator: 'Nevobit Software',
   publisher: 'Nevobit Software',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fitnopolis - Vive en movimiento',
     description:
-      'Construye computadoras extraordinarias con Prooving. PC para juegos premium, PC para juegos personalizados, software y otros productos relacionados con PC, todo para la comunidad gamer y de PC.',
+      'Tienda online de equipamiento deportivo y accesorios de entrenamiento para un estilo de vida activo. Vive en movimiento con Fitnopilos.',
     url: 'https://fitnopolis.com',
     siteName: 'Fitnopolis',
     type: 'website',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Fitnopolis',
     description:
-      'Construye computadoras extraordinarias con Prooving. PC para juegos premium, PC para juegos personalizados, software y otros productos relacionados con PC, todo para la comunidad gamer y de PC.',
+      'Tienda online de equipamiento deportivo y accesorios de entrenamiento para un estilo de vida activo. Vive en movimiento con Fitnopilos.',
     creator: '@nevobitsoftware',
     site: 'Fitnopolis',
     card: 'summary_large_image',

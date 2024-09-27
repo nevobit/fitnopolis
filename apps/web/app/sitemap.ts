@@ -7,7 +7,7 @@ export default function sitemap() {
             lastModified: new Date()
         },
         {
-            url: `${baseUrl}/about`,
+            url: `${baseUrl}/productos`,
             lastModified: new Date()
         },
     ]
