@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className={styles.header} >
       <Menu width={22} />
-      <Image src="/isotype.webp" alt='Logo Fitnopolis' width={25} height={25} />
+      <Image src="/isotype.png" alt='Logo Fitnopolis' width={26} height={26} />
       <ShoppingCart width={22} />
     </header>
   )
