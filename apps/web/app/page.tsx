@@ -3,7 +3,7 @@ import styles from "./Home.module.css"
 import { helebba } from "../utils";
 
 const Home: React.FC = async() => {
-  const categories = await helebba.listCategories();
+  await helebba.listCategories();
   const products = await helebba.listProducts();
 
   return (
