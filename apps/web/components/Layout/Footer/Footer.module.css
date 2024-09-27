@@ -1,4 +1,128 @@
-.footer{
-  padding-inline: 2rem;
-  padding-block: 4rem;
+.footer {
+  padding:  4rem 2rem;
+  background-color: #f8f8f8;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .topContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.leftSection, .rightSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.leftSection {
+  width: 50%;
+}
+
+@media (min-width: 1024px) {
+  .leftSection, .rightSection {
+    width: 25%;
+  }
+}
+
+.socialIcons {
+  display: flex;
+  gap: 6px;
+}
+
+.centerSection {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .centerSection {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.heading {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subscribe {
+  display: flex;
+}
+
+.input {
+  padding: 1rem;
+  width: 75%;
+}
+
+.submitButton {
+  width: 25%;
+  background-color: #333;
+  color: white;
+}
+
+.paymentIcons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .bottomContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.bottomLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .bottomLinks {
+    flex-direction: row;
+  }
+}
+
+.textGray {
+  color: #888;
+}
+
+.boldText {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.city{
+  font-size: 1.2rem;
 }
