@@ -57,17 +57,17 @@ export const fromNow = (d: Date, language: string = 'en'): string => {
 
   let formattedDate = '';
   if (daysDiff > 0) {
-    formattedDate = `${daysDiff} ${languageStrings[language as keyof typeof languageStrings].days} ${languageStrings[language as keyof typeof languageStrings].ago}`;
+    formattedDate = `${daysDiff} ${languageStrings[language as keyof typeof languageStrings]!.days} ${languageStrings[language as keyof typeof languageStrings]!.ago}`;
   } else if (hoursDiff > 0) {
-    formattedDate = `${hoursDiff} ${languageStrings[language as keyof typeof languageStrings].hours} ${languageStrings[language as keyof typeof languageStrings].ago}`;
+    formattedDate = `${hoursDiff} ${languageStrings[language as keyof typeof languageStrings]!.hours} ${languageStrings[language as keyof typeof languageStrings]!.ago}`;
   } else if (minutesDiff > 0) {
-    formattedDate = `${minutesDiff} ${languageStrings[language as keyof typeof languageStrings].minutes} ${languageStrings[language as keyof typeof languageStrings].ago}`;
+    formattedDate = `${minutesDiff} ${languageStrings[language as keyof typeof languageStrings]!.minutes} ${languageStrings[language as keyof typeof languageStrings]!.ago}`;
   } else {
-    formattedDate = `${secondsDiff} ${languageStrings[language as keyof typeof languageStrings].seconds}`;
+    formattedDate = `${secondsDiff} ${languageStrings[language as keyof typeof languageStrings]!.seconds}`;
     if (secondsDiff !== 1) {
-      formattedDate += ` ${languageStrings[language as keyof typeof languageStrings].ago}`;
+      formattedDate += ` ${languageStrings[language as keyof typeof languageStrings]!.ago}`;
     } else {
-      formattedDate += ` ${languageStrings[language as keyof typeof languageStrings].second}`;
+      formattedDate += ` ${languageStrings[language as keyof typeof languageStrings]!.second}`;
     }
   }
 
