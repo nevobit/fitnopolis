@@ -5,20 +5,17 @@ import { helebba } from "../utils";
 const Home: React.FC = async() => {
   await helebba.listCategories();
   const products = await helebba.listProducts();
-
   return (
     <>
     <section className={styles.section} >
       <div className={styles.bg} >
         <div>
-
-  <video className={styles.video} poster="https://global.bowflex.com/on/demandware.static/-/Sites-nautilus-international-Library/default/dw1e7c91e7/bfx/homepage/posters/bowflex-hp-rebrand-launch-1920x800-poster-d.jpg" autoPlay={true} loop={true} muted playsInline tabIndex={0}>
-<source src="https://download.bowflex.com/video/bfx/june23/bowflex-hp-rebrand-launch-1920x800.mp4" type="video/mp4" />
-      </video>
-      
-      <video className={styles.video_mobile} poster="https://global.bowflex.com/on/demandware.static/-/Sites-nautilus-international-Library/default/dwadc9d996/bfx/homepage/posters/bowflex-hp-rebrand-launch-428x613-poster-m.jpg" autoPlay={true} loop={true} muted playsInline tabIndex={0} >
-<source src="https://download.bowflex.com/video/bfx/june23/bowflex-hp-rebrand-launch-428x613.mp4" type="video/mp4" />
-</video>
+          <video className={styles.video} poster="https://global.bowflex.com/on/demandware.static/-/Sites-nautilus-international-Library/default/dw1e7c91e7/bfx/homepage/posters/bowflex-hp-rebrand-launch-1920x800-poster-d.jpg" autoPlay={true} loop={true} muted playsInline tabIndex={0}>
+            <source src="https://download.bowflex.com/video/bfx/june23/bowflex-hp-rebrand-launch-1920x800.mp4" type="video/mp4" />
+          </video>
+          <video className={styles.video_mobile} poster="https://global.bowflex.com/on/demandware.static/-/Sites-nautilus-international-Library/default/dwadc9d996/bfx/homepage/posters/bowflex-hp-rebrand-launch-428x613-poster-m.jpg" autoPlay={true} loop={true} muted playsInline tabIndex={0} >
+            <source src="https://download.bowflex.com/video/bfx/june23/bowflex-hp-rebrand-launch-428x613.mp4" type="video/mp4" />
+          </video>
         </div>
           <div className={styles.copy} >
         <h1>Fomenta tu amor por el movimiento</h1>
