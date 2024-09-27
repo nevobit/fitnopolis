@@ -7,7 +7,6 @@ import Link from 'next/link';
 
 const Products = async () => {
   const products = await helebba.listProducts();
-  
   return (
     <div className={styles.container}>
       <section className={styles.section} >

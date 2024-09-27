@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./Home.module.css"
 import { helebba } from "../utils";
 
-export default async function Home() {
+const Home: React.FC = async() => {
   const categories = await helebba.listCategories();
   const products = await helebba.listProducts();
 
@@ -87,3 +87,6 @@ export default async function Home() {
 
   );
 }
+
+
+export default Home;

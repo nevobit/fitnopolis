@@ -246,7 +246,7 @@ importers:
         specifier: ^0.445.0
         version: 0.445.0(react@18.3.1)
       next:
-        specifier: latest
+        specifier: ^14.2.13
         version: 14.2.13(react-dom@18.3.1)(react@18.3.1)
       react:
         specifier: 18.3.1
@@ -265,11 +265,11 @@ importers:
         specifier: ^20
         version: 20.11.24
       '@types/react':
-        specifier: ^18
-        version: 18.2.61
+        specifier: ^18.3.9
+        version: 18.3.9
       '@types/react-dom':
-        specifier: ^18
-        version: 18.2.19
+        specifier: ^18.3.0
+        version: 18.3.0
       eslint:
         specifier: ^8
         version: 8.57.0
@@ -8536,6 +8536,13 @@ packages:
       '@types/prop-types': 15.7.5
       csstype: 3.1.2
 
+  /@types/react@18.3.9:
+    resolution: {integrity: sha512-+BpAVyTpJkNWWSSnaLBk6ePpHLOGJKnEQNbINNovPWzvEUyAe3e+/d494QdEh71RekM/qV7lw6jzf1HGrJyAtQ==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      csstype: 3.1.2
+    dev: true
+
   /@types/resolve@1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
     dev: false
@@ -11640,7 +11647,7 @@ packages:
       eslint: '*'
       eslint-plugin-import: '*'
     dependencies:
-      debug: 4.3.6
+      debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.57.0
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.17.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)

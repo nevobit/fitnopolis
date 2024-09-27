@@ -52,14 +52,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
   },
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
+interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) =>{
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         <main>
@@ -71,3 +70,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+export default RootLayout
