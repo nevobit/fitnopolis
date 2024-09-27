@@ -6,7 +6,6 @@ const Home: React.FC = async() => {
   const categories = await helebba.listCategories();
   const products = await helebba.listProducts();
 
-  console.log(products)
   return (
     <>
     <section className={styles.section} >
