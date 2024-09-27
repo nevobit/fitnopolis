@@ -15,7 +15,7 @@ const Footer = () => {
           </Link>
           <p className={styles.city} >Medellín, Colombia</p>
           <span className={styles.boldText}>hola@fitnopolis.com</span>
-          <span className={styles.boldText}>326535488</span>
+          <span className={styles.boldText}>3206535488</span>
           <div className={styles.socialIcons}>
             <Image src="/facebook.png" alt="" width={16} height={16} />
             <Image src="/instagram.png" alt="" width={16} height={16} />
