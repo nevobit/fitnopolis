@@ -240,8 +240,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/tools
       helebba-sdk:
-        specifier: ^1.0.22
-        version: 1.0.22
+        specifier: ^1.0.23
+        version: 1.0.23
       lucide-react:
         specifier: ^0.445.0
         version: 0.445.0(react@18.3.1)
@@ -13114,11 +13114,12 @@ packages:
       upper-case: 1.1.3
     dev: true
 
-  /helebba-sdk@1.0.22:
-    resolution: {integrity: sha512-8gspi3zFTr4PpQBaJxau/XTFcwnSvYT/tp52NS+urdrkNiTd8486/0lLSbFCZcuCYEJD9e3N6D6CqkqIOB5wiw==}
+  /helebba-sdk@1.0.23:
+    resolution: {integrity: sha512-SYKDxoW0660Wk4wzVNOAvWjcpcoXL8isjnJIreW4e2ijtQNs8ZBE+cz/Yl0qbyKqky4yTjdML9nfOU6l3tIirQ==}
     dependencies:
       axios: 1.7.3
       crypto: 1.0.1
+      crypto-js: 4.2.0
       jsonwebtoken: 9.0.2
     transitivePeerDependencies:
       - debug

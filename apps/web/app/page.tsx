@@ -1,10 +1,12 @@
 import Image from "next/image";
 import styles from "./Home.module.css"
 import { helebba } from "../utils";
+import Link from "next/link";
 
 const Home: React.FC = async() => {
-  await helebba.listCategories();
   const products = await helebba.listProducts();
+  const categories = await helebba.listCategories();
+
   return (
     <>
     <section className={styles.section} >
@@ -29,22 +31,13 @@ const Home: React.FC = async() => {
         <h2 className={styles.subtitle} >Todos tienen su favorito. Explora nuestras categorías.</h2>
 
         <div className={styles.categories}>
-          <div>
-            <Image src="/bikes.webp" alt='Bicicletas Estaticas' width={150} height={150} />
-            <h3>Bicicletas</h3>
-          </div>
-          <div>
-            <Image src="/treadmill.webp" alt='Bicicletas Estaticas' width={150} height={150} />
-            <h3>Caminadoras</h3>
-          </div>
-          <div>
-            <Image src="/weights.webp" alt='Bicicletas Estaticas' width={150} height={150} />
-            <h3>Pesas</h3>
-          </div>
-          <div>
-            <Image src="/termos.webp" alt='Termos' width={150} height={150} />
-            <h3>Termos</h3>
-          </div>
+          {categories.items.reverse().map(category => (
+            <Link key={category.id} href={`/categorias/${category.name.toLowerCase()}`} >
+              <Image src={category.image} alt={category.name} width={150} height={150} />
+              <h3>{ category.name}</h3>
+          </Link>
+          ))}
+          
         </div>
       </section>
 
