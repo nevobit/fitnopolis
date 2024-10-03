@@ -5,6 +5,8 @@ import { DivisaFormater } from '@repo/tools';
 import styles from "./Products.module.css";
 import Link from 'next/link';
 
+export const dynamic = 'force-dynamic';
+
 const Products = async () => {
   const products = await helebba.listProducts();
   return (
