@@ -27,13 +27,13 @@ const Home: React.FC = async() => {
     
       </section>
           
-    <section>
+    <section className={styles.categories_section}>
         <h2 className={styles.subtitle} >Todos tienen su favorito. Explora nuestras categorías.</h2>
 
         <div className={styles.categories}>
           {categories.items.reverse().map(category => (
             <Link key={category.id} href={`/categorias/${category.name.toLowerCase()}`} >
-              <Image src={category.image} alt={category.name} width={150} height={150} />
+              <Image src={category.image} alt={category.name} width={120} height={120} />
               <h3>{ category.name}</h3>
           </Link>
           ))}

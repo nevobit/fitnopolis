@@ -3,6 +3,7 @@
   background-color: #f8f8f8;
     width: min(90%, 120rem);
   margin-inline: auto;
+  padding-top: 6rem;
 }
 
 .topContainer {
@@ -69,6 +70,10 @@
   gap: 6px;
 }
 
+.linkGroup a{
+  font-size: 1.3rem;
+  margin-top: .5rem;
+}
 .subscribe {
   display: flex;
 }
@@ -94,6 +99,10 @@
   flex-direction: column;
   gap: 8px;
   margin-top: 16px;
+}
+
+.rightSection p{
+  font-size: 1.3rem;
 }
 
 @media (min-width: 768px) {
@@ -126,5 +135,9 @@
 }
 
 .city{
+  font-size: 1.2rem;
+}
+
+.copy{
   font-size: 1.2rem;
 }

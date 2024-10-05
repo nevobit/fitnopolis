@@ -45,27 +45,35 @@
 
 .subtitle{
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .categories{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  grid-template-columns: 1fr ;
   gap: 2rem;
   padding: 1rem;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
-.categories > div > img{
-  width: 100%;
+.categories > a > img{
+  object-fit: cover;
+  margin-inline: auto;
 }
 
-.categories > div{
-  text-align: center;
+.product{
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: .5rem;
+  border: 1px solid transparent;
+  transition: border .3s;
 }
 
-.categories >  div h3{
-  margin-top: 1rem;
+.product:hover{
+  border: 1px solid rgba(0, 0, 0, .3);
 }
 
 .images{
@@ -92,6 +100,24 @@
   margin-top: 4rem;
 }
 
+.name{
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.price{
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  font-weight: 800;
+}
+
+.category{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, .6);
+}
 @media screen and (min-width: 768px) {
   .video{
     display: inline-flex;

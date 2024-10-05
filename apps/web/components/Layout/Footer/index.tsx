@@ -86,7 +86,7 @@ const Footer = () => {
             <span className={styles.boldText}> $ Peso Colombiano</span>
           </div>
         </div>
-        <div>© 2024 Fitnopolis - Todos los derechos reservados</div>
+        <div className={styles.copy} >© 2024 Fitnopolis - Todos los derechos reservados</div>
 
       </div>
     </footer>

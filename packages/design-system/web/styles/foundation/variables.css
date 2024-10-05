@@ -23,20 +23,6 @@
     --playfair: "Playfair Display", serif;
     --raleway: "Raleway", "HelveticaNeue", "Helvetica", sans-serif;
 
-    /* Font sizes */
-    --fs-xs: 0.75rem;
-    --fs-sm: 0.875rem;
-    --fs-base: 1rem;
-    --fs-lg: 1.125rem;
-    --fs-xl: 1.5rem;
-
-    /* Heading font sizes */
-    --h-1: 1.375rem;
-    --h-2: 1.375rem;
-    --h-3: 1rem;
-    --h-4: 1.125rem;
-    --h-5: 0.75rem;
-    --h-6: 0.75rem;
 
     /* Font weights */
     --fw-light: 300;
