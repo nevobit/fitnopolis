@@ -6,4 +6,5 @@
   align-items: center;
   justify-content: space-between;
   width: min(90%, 120rem);
+  margin-inline: auto;
 }
