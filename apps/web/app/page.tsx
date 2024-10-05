@@ -2,9 +2,9 @@ import Image from "next/image";
 import styles from "./Home.module.css"
 import { helebba } from "../utils";
 import Link from "next/link";
+import FeaturedProducts from "./_components/FeaturedProducts";
 
 const Home: React.FC = async() => {
-  const products = await helebba.listProducts();
   const categories = await helebba.listCategories();
 
   return (
@@ -41,19 +41,9 @@ const Home: React.FC = async() => {
         </div>
       </section>
 
-       <section className={styles.products}>
-        <h2 className={styles.subtitle} >Productos destacados</h2>
+      <FeaturedProducts />
 
-        <div className={styles.categories}>
-          {products.items.map(product => (
-<div>
-            <Image src={product.images[0] || ""} alt='Bicicletas Estaticas' width={150} height={150} />
-              <h3>{ product.name}</h3>
-          </div>
-          ))}
-          
-        </div>
-      </section>
+    
       
       <section className={styles.section_social} >
         <h2 className={styles.subtitle} >Únete al movimiento.</h2>
