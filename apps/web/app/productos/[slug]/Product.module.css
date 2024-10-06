@@ -59,6 +59,25 @@
   object-fit: contain;
 }
 
+.color{
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 50rem;
+}
+
+.variants{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.variant{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 @media screen and (min-width: 768px) {
   .product{
     display: grid;

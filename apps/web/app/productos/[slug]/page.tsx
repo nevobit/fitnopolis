@@ -52,6 +52,17 @@ const Product =  async ({
           <h1>{product.name}</h1>
           <h2>{DivisaFormater({ value: product.price })}</h2>
           <p className={styles.desc} >{ product.desc }</p>
+
+          <div className={styles.variants}>
+            {product.variants.map((variant) => (
+              <div className={styles.variant} >
+                {variant.color && (
+                <span style={{ backgroundColor: variant.color }} className={styles.color} ></span>
+                )}
+                <div>{ variant.name }</div>
+              </div>
+            ))}
+          </div>
           
           <button className={styles.btn} > Añadir al carrito </button>
         </div>
