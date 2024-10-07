@@ -1,7 +1,7 @@
 .footer {
-  padding:  4rem 2rem;
+  padding:  4rem 0;
   background-color: #f8f8f8;
-    width: min(90%, 120rem);
+  width: min(90%, 120rem);
   margin-inline: auto;
   padding-top: 6rem;
 }

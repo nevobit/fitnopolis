@@ -9,10 +9,12 @@ const Header = () => {
   return (
     <header className={styles.header} >
       <div className={styles.container} >
-        <button className={styles.menu} >
+        <Link href="/productos" className={styles.menu} >
           <Menu width={27} />
-        </button>
-        <Image src="/isotype.png" alt='Logo Fitnopolis' width={26} height={26} />
+        </Link>
+        <Link href="/" >
+          <Image src="/isotype.png" alt='Logo Fitnopolis' width={26} height={26} />
+        </Link>
         <nav className={styles.nav} >
           <Link href="/productos">PRODUCTOS</Link>
           <Link href="/categorias/termos">TERMOS</Link>
