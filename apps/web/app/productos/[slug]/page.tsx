@@ -47,7 +47,6 @@ const Product = async ({
             ))}
           </div>
         </div>
-
         <div>
           <p className={styles.category} >{product.categories[0]?.name}</p>
           <h1>{product.name}</h1>
@@ -68,7 +67,6 @@ const Product = async ({
 
           
           <AddToCart slug={product.slug} id={product.id} name={product.name} images={product.images} price={product.price} />
-          {/* <button className={styles.btn} > Añadir al carrito </button> */}
         </div>
       </div>
     </div>
