@@ -4,6 +4,7 @@ import { ResolvingMetadata } from 'next';
 import styles from "./Product.module.css"
 import Image from 'next/image';
 import { DivisaFormater } from '@repo/tools';
+import AddToCart from './_components/AddToCart';
 
 type Props = {
   params: { slug: string };
@@ -16,7 +17,7 @@ export async function generateMetadata(
 ) {
   const product = await helebba.getProduct(slug);;
   const previousImages = (await parent).openGraph?.images || []
-  return { 
+  return {
     title: product.name,
     alternates: {
       cannonical: `/productos/${slug}`,
@@ -26,7 +27,7 @@ export async function generateMetadata(
     },
   };
 }
-const Product =  async ({
+const Product = async ({
   params,
 }: {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -64,7 +65,8 @@ const Product =  async ({
             ))}
           </div>
           
-          <button className={styles.btn} > Añadir al carrito </button>
+          <AddToCart slug={product.slug} id={product.id} name={product.name} images={product.images} price={product.price} />
+          {/* <button className={styles.btn} > Añadir al carrito </button> */}
         </div>
       </div>
     </div>

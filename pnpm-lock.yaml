@@ -240,11 +240,14 @@ importers:
         specifier: workspace:*
         version: link:../../packages/tools
       helebba-sdk:
-        specifier: ^1.0.23
-        version: 1.0.23
+        specifier: ^1.0.24
+        version: 1.0.24
       lucide-react:
         specifier: ^0.445.0
         version: 0.445.0(react@18.3.1)
+      mercadopago:
+        specifier: ^2.0.15
+        version: 2.0.15
       next:
         specifier: ^14.2.13
         version: 14.2.13(react-dom@18.3.1)(react@18.3.1)
@@ -254,6 +257,9 @@ importers:
       react-dom:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
+      zustand:
+        specifier: 5.0.0-rc.2
+        version: 5.0.0-rc.2(@types/react@18.3.9)(react@18.3.1)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -8541,7 +8547,6 @@ packages:
     dependencies:
       '@types/prop-types': 15.7.5
       csstype: 3.1.2
-    dev: true
 
   /@types/resolve@1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -13114,8 +13119,8 @@ packages:
       upper-case: 1.1.3
     dev: true
 
-  /helebba-sdk@1.0.23:
-    resolution: {integrity: sha512-SYKDxoW0660Wk4wzVNOAvWjcpcoXL8isjnJIreW4e2ijtQNs8ZBE+cz/Yl0qbyKqky4yTjdML9nfOU6l3tIirQ==}
+  /helebba-sdk@1.0.24:
+    resolution: {integrity: sha512-ZhVEs6BvJOGYhK2el+P+E/FWZE5D+cyW1Ard0EIRbyxL45bvw9EW8SDwznI2qAfr3j9ByjTzrfcr2B7bQzMNNw==}
     dependencies:
       axios: 1.7.3
       crypto: 1.0.1
@@ -15066,6 +15071,15 @@ packages:
       type-fest: 0.18.1
       yargs-parser: 20.2.9
     dev: true
+
+  /mercadopago@2.0.15:
+    resolution: {integrity: sha512-sIV/Kow8i2raNrWT0CDjOLiEg92FiqgX55psWj4hEXcqmG3R9n5ST/yALN6awdgG0OzA/fq16YH0qYG/8y++Zg==}
+    dependencies:
+      node-fetch: 2.7.0
+      uuid: 9.0.1
+    transitivePeerDependencies:
+      - encoding
+    dev: false
 
   /merge-descriptors@1.0.1:
     resolution: {integrity: sha512-cCi6g3/Zr1iqQi6ySbseM1Xvooa98N0w31jzUYrXPX2xqObmFGHJ0tQ5u74H3mVh7wLouTseZyYIq39g8cNp1w==}
@@ -19831,3 +19845,25 @@ packages:
     resolution: {integrity: sha512-cYVsTjKl8b+FrnidjibDWskAv7UKOfcwaVZdp/it9n1s9fU3IkgDbhdIRKCW4JDsAlECJY0ytoVPT3sK6kideA==}
     engines: {node: '>=18'}
     dev: true
+
+  /zustand@5.0.0-rc.2(@types/react@18.3.9)(react@18.3.1):
+    resolution: {integrity: sha512-o2Nwuvnk8vQBX7CcHL8WfFkZNJdxB/VKeWw0tNglw8p4cypsZ3tRT7rTRTDNeUPFS0qaMBRSKe+fVwL5xpcE3A==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
+    dependencies:
+      '@types/react': 18.3.9
+      react: 18.3.1
+    dev: false

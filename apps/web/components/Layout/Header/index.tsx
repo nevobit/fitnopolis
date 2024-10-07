@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from "./Header.module.css";
-import { Menu, ShoppingCart } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import ShoppingCart from '../ShoppingCart';
 
 const Header = () => {
   return (
@@ -19,7 +20,7 @@ const Header = () => {
           <Link href="/categorias/relojes">RELOJES</Link>
         </nav>
         <Link href="/carrito" >
-          <ShoppingCart width={22} />
+          <ShoppingCart />
         </Link>
       </div>
     </header>
