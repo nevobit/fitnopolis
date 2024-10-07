@@ -41,3 +41,23 @@
   background-color: #e91c47;
   margin-top: 2rem;
 }
+
+.col{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.text{
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+     gap: 4rem;
+  }
+}
