@@ -28,7 +28,7 @@ const Categories = async ({
       <h1> {products[0]?.categories[0]?.name || "Sin resultados"} </h1>
       <div className={styles.products}>
             {products.map(product => (
-              <Link href={`productos/${product.slug}`} key={product.id} className={styles.product} >
+              <Link href={`/productos/${product.slug}`} key={product.id} className={styles.product} >
                 <Image src={product.images[0] || ""} alt={product.name} width={130} height={130} />
                 <p title='Marca' className={styles.brand} >{product.brand}</p>
                 <h3 title='Nombre' className={styles.name} >{product.name}</h3>

@@ -35,7 +35,7 @@ const Cart = () => {
               <h2 className={styles.delivery}><span className={styles.title}><Truck /> Envío a domicilio</span>  <span>{items} Producto{items > 1 && "s"}</span></h2>
               {productsInCart.map((product) => (
 
-                <div className={styles.cart_card} >
+                <div key={product.id} className={styles.cart_card} >
               <div className={styles.item_info} >
                     <Link href="/productos" className={styles.photo}>
                       <Image src={product.image} alt='' width={150} height={150} />

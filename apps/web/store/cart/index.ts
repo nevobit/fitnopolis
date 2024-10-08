@@ -6,21 +6,23 @@ interface Coupon {
   value: number;
 }
 
-interface CartProduct {
+export interface CartProduct {
   id: string;
   slug: string;
   name: string;
   price: number;
-  quantity: number;
+  quantity?: number;
   image: string;
 }
 
 interface State {
   cart: CartProduct[];
+  product: CartProduct;
   coupon: Coupon;
   getTotalItems: () => number;
   getTotalValueItems: () => number;
   addProductToCart: (product: CartProduct) => void;
+  getProduct: (id: string) => void;
   removeProduct: (id: string) => void;
   addCoupon: (coupon: Coupon) => void;
 }
@@ -29,6 +31,13 @@ export const useCartStore = create<State>()(
   persist(
     (set, get) => ({
       cart: [],
+      product: {
+        id: '',
+        slug: '',
+        name: '',
+        price: 0,
+        image: ''
+      },
       coupon: {
         name: '',
         value: 0,
@@ -38,12 +47,12 @@ export const useCartStore = create<State>()(
       },
       getTotalItems: () => {
         const { cart } = get();
-        return cart.reduce((total, item) => total + item.quantity, 0);
+        return cart.reduce((total, item) => total + item.quantity!, 0);
       },
       getTotalValueItems: () => {
         const { cart } = get();
         return cart.reduce(
-          (total, item) => total + item.price * item.quantity,
+          (total, item) => total + item.price * item.quantity!,
           0,
         );
       },
@@ -59,17 +68,24 @@ export const useCartStore = create<State>()(
 
         const updatedCartProducts = cart.map((item) => {
           if (item.id == product.id) {
-            if (product?.quantity < 0 && item?.quantity == 0) {
+            if (product?.quantity! < 0 && item?.quantity == 0) {
               return item;
             }
 
-            return { ...item, quantity: item.quantity + product.quantity };
+            return { ...item, quantity: item.quantity! + product.quantity! };
           }
 
           return item;
         });
 
         set({ cart: updatedCartProducts });
+      },
+      getProduct: (id: string) => {
+        const { cart } = get();
+
+        const product = cart.find((item) => item.id == id);
+        set({ product });
+        return product!;
       },
       removeProduct: (id: string) => {
         const { cart } = get();
@@ -78,6 +94,7 @@ export const useCartStore = create<State>()(
 
         set({ cart: updatedCartProducts });
       },
+
     }),
     { name: 'shopping-cart' },
   ),

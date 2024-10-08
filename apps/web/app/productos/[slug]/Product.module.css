@@ -1,5 +1,5 @@
 .body{
-  backgroud-color: #fff;
+  background-color: #fff;
 }
 .container{
   width: min(90%, 120rem);
@@ -42,24 +42,29 @@
   border-radius: .5rem;
 }
 
-
 .product .category{
   font-size: 1.4rem;
   color: rgba(0, 0, 0, .6);
+  margin-bottom: 1rem;
+}
+
+.brand{
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, .6);
+  margin-top: 2rem;
 }
 
 .product h1{
   line-height: 3.2rem;
   font-size: 2.8rem;
   font-weight: 600;
-  margin-top: 1rem;
-  margin-bottom: 1.8rem;
 }
 
 .desc{
   font-size: 1.4rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   grid-column: 2;
+  color: #737373;
 }
 
 .images{
@@ -72,14 +77,14 @@
 }
 
 .images img{
-  width: 12rem;
+  width: 14rem;
   height: 12rem;
   object-fit: contain;
 }
 
 .color{
-  height: 2rem;
-  width: 2rem;
+  height: 3.5rem;
+  width: 3.5rem;
   display: inline-block;
   border-radius: 50rem;
 }
@@ -103,6 +108,50 @@
   font-weight: 600;
   font-size: 1.6rem;
 }
+
+.price{
+  font-size: 2.8rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #e91c47;
+}
+.infos{
+  margin-top: 3rem;
+}
+
+.info{
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, .6);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .5rem;
+  margin-bottom: .4rem;
+}
+
+
+.qty{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: qty;
+  border: 1px solid rgba(0, 0, 0, .1);
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 50%;
+  border-radius: .5rem;
+}
+
+.qty p{
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.qty button{
+  background-color: transparent;
+}
+
 @media screen and (min-width: 768px) {
   .product{
     display: grid;

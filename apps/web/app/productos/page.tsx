@@ -19,7 +19,7 @@ const Products = async () => {
       <div className={styles.products} >
 
         {products.items.map(product => (
-          <Link href={`productos/${product.slug}`} className={styles.product} >
+          <Link key={product.id} href={`productos/${product.slug}`} className={styles.product} >
             <Image src={product.images[0] || ""} alt={product.name} width={130} height={130} />
             <p title='Marca' className={styles.brand} >{product.brand}</p>
             <h3 title='Nombre' className={styles.name} >{product.name}</h3>

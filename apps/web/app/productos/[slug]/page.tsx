@@ -5,6 +5,9 @@ import styles from "./Product.module.css"
 import Image from 'next/image';
 import { DivisaFormater } from '@repo/tools';
 import AddToCart from './_components/AddToCart';
+import Images from './Images';
+import { TrendingUp } from 'lucide-react';
+import Quantity from './Quantity';
 
 type Props = {
   params: { slug: string };
@@ -41,32 +44,43 @@ const Product = async ({
     <div className={styles.container}>
       <div className={styles.product} >
         <div>
-          <Image src={product.images[0]!} alt={product.name} width={400} height={400} />
-          <div className={styles.images} >
-            {product.images.map((image) => (
-              <Image src={image} alt={product.name} width={120} height={120} />
-            ))}
-          </div>
+            <Image src={product.images[0] ? product.images[0] : "/noi.png"} alt={product.name} width={400} height={400} />
+            <Images images={product.images} name={product.name} />
         </div>
         <div>
-          <p className={styles.category} >{product.categories[0]?.name}</p>
-          <h1>{product.name}</h1>
-          <h2>{DivisaFormater({ value: product.price })}</h2>
+            <p className={styles.brand} >{product.brand}</p>
+            <h1 className={styles.title} >{product.name}</h1>
+            <p className={styles.category} >{product.categories[0]?.name}</p>
+
+            <h2 className={styles.price} >{DivisaFormater({ value: product.price })}</h2>
+            <p className={styles.desc} >{product.desc}</p>
 
             {product.variants.length > 0 && (
               <h3 className={styles.subtitle} >Colores Disponibles</h3>               
             )}
           <div className={styles.variants}>
             {product.variants.map((variant) => (
-              <div className={styles.variant} >
+              <div key={variant.id} className={styles.variant} >
                 {variant.color && (
-                <span style={{ backgroundColor: variant.color }} className={styles.color} ></span>
+                  <span key={variant.id} style={{ backgroundColor: variant.color }} className={styles.color} ></span>
                 )}
               </div>
             ))}
-          </div>
+            </div>
 
-          <p className={styles.desc} >{product.desc}</p>
+            <h3 className={styles.subtitle} >Cantidad</h3>
+            <Quantity />
+
+            <div className={styles.infos} >
+              <p className={styles.info}>
+                <span >{product.stock}</span> unidades disponibles - ¡pide pronto!
+              </p>
+              <p className={styles.info} >
+                <TrendingUp />
+                <span >{Math.floor(Math.random() * 50) + 10}</span> vendidos en los últimos 7 días
+              </p>
+            </div>
+
 
           
           <AddToCart slug={product.slug} id={product.id} name={product.name} images={product.images} price={product.price} />
