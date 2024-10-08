@@ -3,6 +3,7 @@ import { helebba } from '../../../utils';
 import Link from 'next/link';
 import Image from 'next/image';
 import { DivisaFormater } from '@repo/tools';
+import styles from "./Products.module.css"
 
 type Props = {
   params: { slug: string };
@@ -23,13 +24,14 @@ const Categories = async ({
   return (
     <div>
             {products.map(product => (
-          <Link href={`/productos/${product.slug}`}   key={product.id} >
-            <div>
-              <Image src={product.images[0]!} width={150} height={150} alt={product.name} />
-            </div>
-            <h3>{product.name}</h3>
-            <p>{ DivisaFormater( { value: product.price })}</p>
-          </Link>
+              <Link href={`productos/${product.slug}`} className={styles.product} >
+                <Image src={product.images[0] || ""} alt={product.name} width={90} height={90} />
+                <h3 title='Nombre' className={styles.name} >{product.name}</h3>
+                <p title='Categoria' className={styles.category} >{product.categories[0]?.name}</p>
+                <h3 title='Precio' className={styles.price} >{DivisaFormater({ value: product.price })}</h3>
+
+
+              </Link>
         ))}
     </div>
   )
