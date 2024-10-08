@@ -29,7 +29,7 @@ const Footer = () => {
         {/* LEFT */}
         <div className={styles.leftSection}>
           <Link href="/">
-            <Image src="/fitnologo.png" width={180} height={50} alt="Fitnopolis logo" />
+              <Image src="/fitnologo.png" width={180} height={35} alt="Fitnopolis logo" />
           </Link>
           <p className={styles.city} >Medellín, Colombia</p>
           <span className={styles.boldText}>hola@fitnopolis.com</span>
