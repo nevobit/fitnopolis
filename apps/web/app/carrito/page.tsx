@@ -17,6 +17,9 @@ const Cart = () => {
 
 
   return (
+    <div className={styles.body} >
+
+
     <div className={styles.container} >
       <h1>MI CARRITO</h1>
 
@@ -77,7 +80,9 @@ const Cart = () => {
         </div>
       )}
 
+      </div>
     </div>
+
   )
 }
 

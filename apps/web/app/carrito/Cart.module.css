@@ -1,3 +1,7 @@
+.body{
+  background-color: #fff;
+}
+
 .container{
   width: min(90%, 120rem);
   margin-inline: auto;
