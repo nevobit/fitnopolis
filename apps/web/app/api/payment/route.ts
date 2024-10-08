@@ -1,6 +1,6 @@
 import { MercadoPagoConfig, Preference } from 'mercadopago';
 import { PreferenceRequest } from 'mercadopago/dist/clients/preference/commonTypes';
-import { helebbaClient } from 'helebba-sdk';
+import { ContactType, helebbaClient } from 'helebba-sdk';
 import { NextResponse } from 'next/server';
 import { NextApiResponse } from 'next';
 
@@ -16,11 +16,32 @@ export async function POST(
   req: Request,
 ) {
   const body = await req.json();
+
+  const createdContact = await helebba.createContact({
+    iban: body.identification,
+    name: body.name, email: body.email, mobile: body.phone, isPerson: true, account: "e610f0f3-b380-4a1d-8900-17fe25ce6cbd", type: ContactType.Lead, shippingAddresses: [{
+      shippingId: "",
+      name: body.name,
+      address: body.address,
+      city: body.city,
+      postalCode: 0,
+      province: '',
+      country: 'Colombia',
+      countryCode: '',
+    }], billAddress: {
+      address: body.address,
+      city: body.city,
+      country: 'Colombia',
+    }
+  });
+
   let order = {
+    contact: createdContact.id,
     account: "e610f0f3-b380-4a1d-8900-17fe25ce6cbd",
     date: Date.now().toString(),
     subtotal: body.total_price,
     total: body.total_price,
+    contactName: body.name,
     docType: "sales-order",
     products: [],
     customFields: [{ field: 'link', value: '' }]
@@ -44,10 +65,7 @@ export async function POST(
 
     if (result.init_point) {
       order.customFields[0] = { field: 'link', value: result.init_point };
-      console.log("......Init");
-
       const createdOrder = await helebba.createOrder(order);
-      console.log("......Finish");
       console.log(createdOrder);
 
       return NextResponse.json({ paymentLink: result.init_point }, { status: 200 });

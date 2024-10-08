@@ -2,12 +2,18 @@
 import { DivisaFormater } from '@repo/tools';
 import React, { useState } from 'react'
 import styles from './Checkout.module.css'
-import { Link } from 'lucide-react';
 import { useCartStore } from '../../store';
 import { Field, Input } from '@repo/design-system/web'
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false);
+  const [name, setName] = useState("");
+  const [identification, setIdentification] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [email, setEmail] = useState("");
+
   const totalValue = useCartStore(state => state.getTotalValueItems())
 
   const payOrder = async () => {
@@ -16,7 +22,7 @@ const Checkout = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ title: "Compra Fitnopolis", total_price: totalValue })
+      body: JSON.stringify({ name, identification, phone, address, city, email, title: "Compra Fitnopolis", total_price: totalValue })
     });
 
     if (!response.ok) {
@@ -58,27 +64,27 @@ const Checkout = () => {
 
       <div>
         <Field label='Nombre'>
-          <Input placeholder="" />
+          <Input placeholder="Introduce tu nombre" value={name} onChange={({ target }) => setName(target.value)} />
         </Field>
         <div className={styles.col} >
-          <Field label='Cedula'>
-            <Input placeholder="" />
+          <Field label='Cédula'>
+            <Input placeholder="Introduce tu número de doumento" value={identification} onChange={({ target }) => setIdentification(target.value)} />
           </Field>
-          <Field label='Telefono'>
-            <Input placeholder="" />
+          <Field label='Teléfono'>
+            <Input placeholder="Introduce tu número de teléfono" value={phone} onChange={({ target }) => setPhone(target.value)} />
           </Field>
         </div>
 
-        <Field label='Direccion'>
-          <Input placeholder="" />
+        <Field label='Dirección'>
+          <Input placeholder="Introduce tu dirección" value={address} onChange={({ target }) => setAddress(target.value)} />
         </Field>
         <div className={styles.col} >
 
           <Field label='Ciudad'>
-            <Input placeholder="" />
+            <Input placeholder="Introduce tu ciudad" value={city} onChange={({ target }) => setCity(target.value)} />
           </Field>
           <Field label='Correo'>
-            <Input placeholder="" />
+            <Input placeholder="Introduce tu correo" value={email} onChange={({ target }) => setEmail(target.value)} />
           </Field>
         </div>
         <button className={styles.btn} onClick={payOrder} >Pagar</button>
