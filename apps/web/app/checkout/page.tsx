@@ -43,6 +43,9 @@ const Checkout = () => {
 
 
   return (
+
+    <div className={styles.body} >
+
     <div className={styles.container} >
 
       <div className={styles.summary} >
@@ -91,7 +94,9 @@ const Checkout = () => {
 
         <p className={styles.text} >Al confirmar tu pago, Fitnopolis te enviara por correo electronio toda la información relacionada a tu compra y como podrás rastrear tu pedido.</p>
       </div>
+      </div>
     </div>
+
   )
 }
 

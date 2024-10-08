@@ -1,3 +1,6 @@
+.body{
+  backgroud-color: #fff;
+}
 .container{
   width: min(90%, 120rem);
   margin-inline: auto;
@@ -64,13 +67,14 @@
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
-  overflow: scroll;
+  overflow-x: scroll;
+  margin-top: 2rem;
 }
 
 .images img{
-  width: 10rem;
-  height: 10rem;
-  object-fit: cover;
+  width: 12rem;
+  height: 12rem;
+  object-fit: contain;
 }
 
 .color{

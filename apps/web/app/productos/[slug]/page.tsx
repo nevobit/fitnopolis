@@ -37,6 +37,7 @@ const Product = async ({
     const product = await helebba.getProduct(slug!);
 
   return (
+    <div className={styles.body}>
     <div className={styles.container}>
       <div className={styles.product} >
         <div>
@@ -52,7 +53,9 @@ const Product = async ({
           <h1>{product.name}</h1>
           <h2>{DivisaFormater({ value: product.price })}</h2>
 
-          <h3 className={styles.subtitle} >Colores Disponibles</h3>
+            {product.variants.length > 0 && (
+              <h3 className={styles.subtitle} >Colores Disponibles</h3>               
+            )}
           <div className={styles.variants}>
             {product.variants.map((variant) => (
               <div className={styles.variant} >
@@ -68,6 +71,7 @@ const Product = async ({
           
           <AddToCart slug={product.slug} id={product.id} name={product.name} images={product.images} price={product.price} />
         </div>
+      </div>
       </div>
     </div>
   )
