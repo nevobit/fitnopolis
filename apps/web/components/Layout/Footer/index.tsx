@@ -6,6 +6,24 @@ import styles from './Footer.module.css';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
+      <div className={styles.container} >
+        <div className={styles.security} >
+          <div>
+            <Image src="/payment.svg" width={60} height={60} alt='Pago seguro con Mercado Pago' />
+            <h4>Paga con tarjeta o en efectivo</h4>
+            <p>Con Mercado Pago, paga en cuotas y aprovecha la comodidad de financiación que te da tu banco, o hazlo con efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+          </div>
+          <div>
+            <Image src="/shipping.svg" width={60} height={60} alt='Envío gratis desde $ 60.000' />
+            <h4>Envío gratis desde $ 60.000</h4>
+            <p>Con cualquier compra que hagas, tienes envíos gratis en miles de productos seleccionados.</p>
+          </div>
+          <div>
+            <Image src="/protected.svg" width={60} height={60} alt='Seguridad en tu compra, de principio a fin' />
+            <h4>Seguridad, de principio a fin</h4>
+            <p>¿No te gusta? ¡Devuélvelo! En Fitnopolis, no hay nada que no puedas hacer, porque estás siempre protegido.</p>
+          </div>
+        </div>
       {/* TOP */}
       <div className={styles.topContainer}>
         {/* LEFT */}
@@ -88,7 +106,9 @@ const Footer = () => {
         </div>
         <div className={styles.copy} >© 2024 Fitnopolis - Todos los derechos reservados</div>
 
+        </div>
       </div>
+
     </footer>
   );
 };

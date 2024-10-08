@@ -30,7 +30,7 @@
   background-color: #fff;
   padding: 4rem 2rem;
   border-radius: .5rem;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, .1);
   transition: border .3s;
 }
 
@@ -59,20 +59,27 @@
 }
 
 .products{
-  margin-top: 4rem;
+  margin-top: 3rem;
+}
+
+.brand{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, .6);
+  margin-top: 5rem;
 }
 
 .name{
   font-size: 1.4rem;
   font-weight: 400;
   text-align: left;
-  margin-top: 5rem;
 }
 
 .price{
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-top: 1rem;
-  font-weight: 700;
+  font-weight: 600;
+  color: #e91c47;
 }
 
 .category{
@@ -82,6 +89,21 @@
 }
 
 .product img{
-  object-fit: cover;
+  object-fit: contain;
   margin-inline: auto;
+}
+
+.header h1{
+  font-size: 2.4rem;
+}
+
+.info{
+  font-size: 1.15rem;
+  color: rgba(0, 0, 0, .6);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  margin-bottom: .8rem;
 }

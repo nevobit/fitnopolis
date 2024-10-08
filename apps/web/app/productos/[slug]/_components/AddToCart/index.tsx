@@ -5,7 +5,7 @@ import styles from '../../Product.module.css';
 import { useRouter } from 'next/navigation';
 import { useCartStore } from '../../../../../store';
 
-const AddToCart = ({ slug, id, name, images, price }: any) => {
+const AddToCart = ({ slug, id, name, images, price, style }: any) => {
   const addProductToCart = useCartStore((state) => state.addProductToCart);
 
   const router = useRouter();
@@ -24,7 +24,7 @@ const AddToCart = ({ slug, id, name, images, price }: any) => {
   };
 
   return (
-    <button onClick={addToCart} className={styles.btn}>
+    <button onClick={addToCart} style={style} className={style ? styles.button : styles.btn}>
       Añadir al carrito
     </button>
   );

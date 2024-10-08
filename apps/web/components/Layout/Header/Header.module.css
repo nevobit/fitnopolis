@@ -2,6 +2,8 @@
   height: 4.5rem;
   padding-block: 1rem;
   font-size: 1.4rem;
+  background-color: #1c1c1c;
+  color: aliceblue;
 }
 
 .container{
@@ -14,6 +16,8 @@
 
 .nav{
   display: none;
+  color: aliceblue;
+
 }
 
 .menu{
@@ -32,6 +36,7 @@
 
 .nav a{
   color: #000;
+  color: aliceblue;
   transition: color .3s;
 }
 

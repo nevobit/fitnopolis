@@ -1,9 +1,14 @@
 .footer {
   padding:  4rem 0;
   background-color: #f8f8f8;
+  padding-top: 6rem;
+  margin-top: 8rem;
+}
+
+.container{
   width: min(90%, 120rem);
   margin-inline: auto;
-  padding-top: 6rem;
+
 }
 
 .topContainer {
@@ -12,11 +17,49 @@
   gap: 24px;
 }
 
+.security{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+  padding-bottom: 8rem;
+}
+
+.security div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 35px 24px 20px;
+    
+}
+
+.security div p{
+  color: #737374;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin: 2px 0 10px;
+}
+
+.security div h4{
+  margin-top: 1.6rem;
+  color: #4b4b4b;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
 @media (min-width: 768px) {
   .topContainer {
     flex-direction: row;
     justify-content: space-between;
   }
+
+
+.security {
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: flex-start;
+}
 }
 
 .leftSection, .rightSection {
