@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import styles from './Footer.module.css';
+import { Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -34,12 +35,8 @@ const Footer = () => {
           <p className={styles.city} >Medellín, Colombia</p>
           <span className={styles.boldText}>hola@fitnopolis.com</span>
           <span className={styles.boldText}>3137426636</span>
-          <div className={styles.socialIcons}>
-            <Image src="/facebook.png" alt="" width={16} height={16} />
-            <Image src="/instagram.png" alt="" width={16} height={16} />
-            <Image src="/youtube.png" alt="" width={16} height={16} />
-            <Image src="/pinterest.png" alt="" width={16} height={16} />
-            <Image src="/x.png" alt="" width={16} height={16} />
+            <div className={styles.socialIcons}>
+              <Link href="https://instagram.com/fitnopolisoficial" > <Instagram width={25} height={25} /> </Link>
           </div>
         </div>
         {/* CENTER */}
