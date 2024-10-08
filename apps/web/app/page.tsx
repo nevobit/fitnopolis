@@ -33,7 +33,7 @@ const Home: React.FC = async() => {
         <div className={styles.categories}>
           {categories.items.reverse().map(category => (
             <Link key={category.id} href={`/categorias/${category.name.toLowerCase()}`} >
-              <Image src={category.image} alt={category.name} width={120} height={120} />
+              <Image src={category.image} alt={"Categoria " + category.name} width={120} height={120} />
               <h3>{ category.name}</h3>
           </Link>
           ))}

@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className={styles.header} >
       <div className={styles.container} >
-        <Link href="/productos" className={styles.menu} >
+        <Link href="/productos" title='Menu' className={styles.menu} >
           <Menu width={27} />
         </Link>
         <Link href="/" >
@@ -21,7 +21,7 @@ const Header = () => {
           <Link href="/categorias/gorras">GORRAS</Link>
           <Link href="/categorias/relojes">RELOJES</Link>
         </nav>
-        <Link href="/carrito" >
+        <Link href="/carrito" title='Carrito' >
           <ShoppingCart />
         </Link>
       </div>

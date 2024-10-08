@@ -29,14 +29,14 @@ const Footer = () => {
       <div className={styles.topContainer}>
         {/* LEFT */}
         <div className={styles.leftSection}>
-          <Link href="/">
+            <Link href="/" title='Logo Fitnopolis'>
               <Image src="/fitnologo.png" width={170} height={40} alt="Fitnopolis logo" />
           </Link>
           <p className={styles.city} >Medellín, Colombia</p>
           <span className={styles.boldText}>hola@fitnopolis.com</span>
           <span className={styles.boldText}>3137426636</span>
             <div className={styles.socialIcons}>
-              <Link href="https://instagram.com/fitnopolisoficial" > <Instagram width={25} height={25} /> </Link>
+              <Link title='Instagram Fitnopolis' href="https://instagram.com/fitnopolisoficial" > <Instagram width={25} height={25} /> </Link>
           </div>
         </div>
         {/* CENTER */}

@@ -21,7 +21,7 @@ const ShoppingCart = () => {
           )}
         </>
       )}
-      <Icon width={22} />
+      <Icon width={26} />
     </Link>
   )
 }
