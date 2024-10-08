@@ -34,6 +34,10 @@
     
 }
 
+.leftSection img{
+  object-fit: contain;
+}
+
 .security div p{
   color: #737374;
   font-size: 1.4rem;

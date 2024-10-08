@@ -151,8 +151,20 @@
 .qty button{
   background-color: transparent;
 }
+.similar_container{
+  margin-top: 6rem;
 
+}
+.similar{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 2rem;
+}
 @media screen and (min-width: 768px) {
+  
+.similar{
+  grid-template-columns: 1fr 1fr 1fr;
+}
   .product{
     display: grid;
     grid-template-columns: 1fr 50rem;

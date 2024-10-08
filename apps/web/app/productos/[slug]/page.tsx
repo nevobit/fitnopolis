@@ -6,8 +6,10 @@ import Image from 'next/image';
 import { DivisaFormater } from '@repo/tools';
 import AddToCart from './_components/AddToCart';
 import Images from './Images';
-import { TrendingUp } from 'lucide-react';
+import { Shield, TrendingUp } from 'lucide-react';
 import Quantity from './Quantity';
+import Link from 'next/link';
+import ProductCard from '../../_components/ProductCard';
 
 type Props = {
   params: { slug: string };
@@ -37,7 +39,9 @@ const Product = async ({
   params: { [key: string]: string };
 }) => {
   const { slug } = params;
-    const product = await helebba.getProduct(slug!);
+  const product = await helebba.getProduct(slug!);
+  const products = await helebba.listProducts();
+
 
   return (
     <div className={styles.body}>
@@ -70,6 +74,7 @@ const Product = async ({
 
             <h3 className={styles.subtitle} >Cantidad</h3>
             <Quantity />
+            <AddToCart slug={product.slug} id={product.id} name={product.name} images={product.images} price={product.price} />
 
             <div className={styles.infos} >
               <p className={styles.info}>
@@ -83,9 +88,17 @@ const Product = async ({
 
 
           
-          <AddToCart slug={product.slug} id={product.id} name={product.name} images={product.images} price={product.price} />
+          </div>
         </div>
-      </div>
+
+        <div className={styles.similar_container} >
+          <h2>Productos Similares</h2>
+          <div className={styles.similar} >
+            {products.items.slice(0, 4).filter((prod) => prod.categoryId == product.categoryId).map((prod) => (
+              <ProductCard key={prod.id} prod={prod} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   )

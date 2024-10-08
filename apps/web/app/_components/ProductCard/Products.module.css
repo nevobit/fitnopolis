@@ -1,0 +1,156 @@
+.section{
+  margin-bottom: 4rem;
+  height: 65vh;
+}
+
+.bg {
+  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.video_mobile{
+  width: 100%;
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    position:absolute;
+    z-index: 0;
+}
+
+.video{
+  display: none;
+}
+.copy{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    z-index: 1;
+    color: #fff;
+    margin-top: 20rem;
+}
+
+.copy h1{
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.copy p{
+  font-size: 2rem;
+}
+
+.subtitle{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.categories{
+  display: grid;
+  width: 80%;
+  grid-template-columns: 1fr ;
+  gap: 2rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.categories > a > img{
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+.product{
+  background-color: #fff;
+  padding: 4rem 2rem ;
+  border-radius: .5rem;
+  border: 1px solid transparent;
+  transition: border .3s;
+}
+
+.product:hover{
+  border: 1px solid rgba(0, 0, 0, .3);
+}
+
+.images{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.section_social{
+  padding-inline: 2rem;
+  margin-block: 4rem;
+}
+
+.section_social p{
+  text-align: center;
+}
+
+.products{
+  margin-top: 4rem;
+}
+
+.brand{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, .6);
+  margin-top: 1.5rem;
+}
+
+.name{
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.price{
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  font-weight: 800;
+}
+
+.category{
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, .6);
+}
+
+.info{
+  font-size: 1.15rem;
+  color: rgba(0, 0, 0, .6);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  margin-bottom: .8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .video{
+    display: inline-flex;
+    width: 100%;
+    object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+  } 
+
+  .video_mobile{
+    display: none;
+  }
+
+  .categories{
+    display: flex;
+
+}
+}
