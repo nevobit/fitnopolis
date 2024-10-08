@@ -9,7 +9,7 @@ import { Shield, TrendingUp } from 'lucide-react'
 
 const ProductCard = ({ prod }: { prod: Product }) => {
   return (
-    <Link key={prod.id} href={`productos/${prod.slug}`} className={styles.product} >
+    <Link key={prod.id} href={`/productos/${prod.slug}`} className={styles.product} >
       <Image src={prod.images[0] || ""} alt={prod.name} width={130} height={130} />
       <p title='Marca' className={styles.brand} >{prod.brand}</p>
       <h3 title='Nombre' className={styles.name} >{prod.name}</h3>
