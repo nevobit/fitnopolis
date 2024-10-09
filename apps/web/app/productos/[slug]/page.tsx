@@ -93,7 +93,7 @@ const Product = async ({
         <div className={styles.similar_container} >
           <h2>Productos Similares</h2>
           <div className={styles.similar} >
-            {products.items.filter((prod) => prod.categoryId == product.categoryId).slice(0, 4).map((prod) => (
+            {products.items.filter((prod) => prod.categoryId == product.categoryId).slice(0, 3).map((prod) => (
               <ProductCard key={prod.id} prod={prod} />
             ))}
           </div>
