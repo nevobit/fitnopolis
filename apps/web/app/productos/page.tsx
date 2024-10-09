@@ -7,8 +7,6 @@ import Link from 'next/link';
 import AddToCart from './[slug]/_components/AddToCart';
 import { Shield, TrendingUp } from 'lucide-react';
 
-export const dynamic = 'force-dynamic';
-
 const Products = async () => {
   const products = await helebba.listProducts();
   return (

@@ -7,8 +7,6 @@ import { DivisaFormater } from '@repo/tools';
 import AddToCart from '../../productos/[slug]/_components/AddToCart';
 import { Shield, TrendingUp } from 'lucide-react';
 
-export const dynamic = 'force-dynamic';
-
 const FeaturedProducts = async () => {
   const products = await helebba.listProducts();
 

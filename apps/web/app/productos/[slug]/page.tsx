@@ -6,9 +6,8 @@ import Image from 'next/image';
 import { DivisaFormater } from '@repo/tools';
 import AddToCart from './_components/AddToCart';
 import Images from './Images';
-import { Shield, TrendingUp } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 import Quantity from './Quantity';
-import Link from 'next/link';
 import ProductCard from '../../_components/ProductCard';
 
 type Props = {
