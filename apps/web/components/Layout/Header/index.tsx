@@ -21,9 +21,7 @@ const Header = () => {
           <Link href="/categorias/gorras">GORRAS</Link>
           <Link href="/categorias/relojes">RELOJES</Link>
         </nav>
-        <Link href="/carrito" title='Carrito' >
-          <ShoppingCart />
-        </Link>
+        <ShoppingCart />
       </div>
     </header>
   )
