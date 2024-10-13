@@ -32,7 +32,7 @@ const Cart = () => {
       ) : (
         <div className={styles.cart_container} >
           <div className={styles.items} >
-              <h2 className={styles.delivery}><span className={styles.title}><Truck /> Envío a domicilio</span>  <span>{items} Producto{items > 1 && "s"}</span></h2>
+                <h2 className={styles.delivery}><span className={styles.title}><Truck /> Envío a domicilio</span>  <span>{items} Producto{items > 1 && "s "}</span></h2>
               {productsInCart.map((product) => (
 
                 <div key={product.id} className={styles.cart_card} >
