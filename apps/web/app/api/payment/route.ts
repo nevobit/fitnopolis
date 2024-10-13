@@ -43,7 +43,9 @@ export async function POST(
     total: body.total_price,
     contactName: body.name,
     docType: "sales-order",
-    products: [],
+    products: [{
+      price: Number(body.total_price)
+    }],
     customFields: [{ field: 'link', value: '' }]
   };
 
@@ -56,8 +58,8 @@ export async function POST(
         unit_price: body.total_price
       }
     ],
-    notification_url: "/api/webhook",
-    external_reference: body.id
+    notification_url: "api/webhook",
+    external_reference: order.contact
   };
 
   try {
