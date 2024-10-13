@@ -26,7 +26,8 @@ const Checkout = () => {
     });
 
     if (!response.ok) {
-      throw new Error('Error en la solicitud de pago', response);
+      console.log(response);
+      throw new Error('Error en la solicitud de pago');
     }
 
     // Parseamos la respuesta a JSON
