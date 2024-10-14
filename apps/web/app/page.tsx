@@ -23,8 +23,7 @@ const Home: React.FC = async() => {
         <h1>Fomenta tu amor por el movimiento</h1>
         <p>El fitness debe sentirse bien</p>
         </div>
-      </div>
-    
+        </div>
       </section>
           
     <section className={styles.categories_section}>
