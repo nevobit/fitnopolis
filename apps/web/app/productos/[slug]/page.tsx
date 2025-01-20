@@ -38,7 +38,7 @@ const Product = async ({
   params: { [key: string]: string };
 }) => {
   const { slug } = params;
-  const product = await helebba.getProduct(slug!);
+  const product = await helebba.getProduct(slug!) as any;
   const products = await helebba.listProducts();
 
 
@@ -62,7 +62,7 @@ const Product = async ({
               <h3 className={styles.subtitle} >Colores Disponibles</h3>               
             )}
           <div className={styles.variants}>
-            {product.variants.map((variant) => (
+              {product.variants.map((variant: any) => (
               <div key={variant.id} className={styles.variant} >
                 {variant.color && (
                   <span key={variant.id} style={{ backgroundColor: variant.color }} className={styles.color} ></span>
