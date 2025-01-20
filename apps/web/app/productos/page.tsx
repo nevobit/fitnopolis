@@ -8,7 +8,7 @@ import AddToCart from './[slug]/_components/AddToCart';
 import { Shield, TrendingUp } from 'lucide-react';
 
 const Products = async () => {
-  const products = await helebba.listProducts();
+  const products = await helebba.listProducts() as any;
   return (
     <div className={styles.container}>
       <div className={styles.header} >
@@ -16,7 +16,7 @@ const Products = async () => {
       </div>
       <div className={styles.products} >
 
-        {products.items.map(product => (
+        {products.items.map((product: any) => (
           <Link key={product.id} href={`productos/${product.slug}`} className={styles.product} >
             <Image src={product.images[0] || ""} alt={product.name} width={130} height={130} />
             <p title='Marca' className={styles.brand} >{product.brand}</p>
