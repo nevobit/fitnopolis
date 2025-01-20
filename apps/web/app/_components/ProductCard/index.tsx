@@ -7,7 +7,7 @@ import { Product } from 'helebba-sdk'
 import { DivisaFormater } from '@repo/tools'
 import { Shield, TrendingUp } from 'lucide-react'
 
-const ProductCard = ({ prod }: { prod: Product }) => {
+const ProductCard = ({ prod }: { prod: any }) => {
   return (
     <Link key={prod.id} href={`/productos/${prod.slug}`} className={styles.product} >
       <Image src={prod.images[0] || ""} alt={prod.name} width={130} height={130} />
