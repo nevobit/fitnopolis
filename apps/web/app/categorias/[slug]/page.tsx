@@ -21,13 +21,13 @@ const Categories = async ({
     product.categories.some((category) => 
         category.name.toLowerCase() === params.slug.toLowerCase()
     )
-);
+  ) as any;
 
   return (
     <div className={styles.container} >
       <h1> {products[0]?.categories[0]?.name || "Sin resultados"} </h1>
       <div className={styles.products}>
-            {products.map(product => (
+        {products.map((product: any) => (
               <Link href={`/productos/${product.slug}`} key={product.id} className={styles.product} >
                 <Image src={product.images[0] || ""} alt={product.name} width={130} height={130} />
                 <p title='Marca' className={styles.brand} >{product.brand}</p>
