@@ -33,7 +33,7 @@ export async function POST(
       city: body.city,
       country: 'Colombia',
     }
-  });
+  }) as any;
 
   let order = {
     contact: createdContact.id,
