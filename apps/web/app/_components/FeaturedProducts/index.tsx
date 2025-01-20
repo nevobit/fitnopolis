@@ -8,17 +8,17 @@ import AddToCart from '../../productos/[slug]/_components/AddToCart';
 import { Shield, TrendingUp } from 'lucide-react';
 
 const FeaturedProducts = async () => {
-  const products = await helebba.listProducts();
+  const products = await helebba.listProducts() as any;
 
   return (
        <section className={styles.products}>
         <h2 className={styles.subtitle} >Productos destacados</h2>
 
         <div className={styles.categories}>
-          {products.items.slice(0, 4).map(product => (
+        {products.items.slice(0, 4).map((product: any) => (
             <Link href={`productos/${product.slug}`} key={product.id} className={styles.product} >
               <Image src={product.images[0] || ""} alt={product.name} width={130} height={130} />
-              <p title='Marca' className={styles.brand} >{product.brand}</p>
+              <p title='Marca' className={styles.brand} >{product.brand as any}</p>
               <h3 title='Nombre' className={styles.name} >{product.name}</h3>
               <p title='Categoria' className={styles.category} >{product.categories[0]?.name}</p>
               <h3 title='Precio' className={styles.price} >{DivisaFormater({ value: product.price })}</h3>
