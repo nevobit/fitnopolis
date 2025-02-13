@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { DivisaFormater } from '@repo/tools';
 import AddToCart from '../../productos/[slug]/_components/AddToCart';
 import { Shield, TrendingUp } from 'lucide-react';
+import { Product } from 'helebba-sdk';
 
 const FeaturedProducts = async () => {
   const products = await helebba.listProducts() as any;
@@ -15,7 +16,7 @@ const FeaturedProducts = async () => {
         <h2 className={styles.subtitle} >Productos destacados</h2>
 
         <div className={styles.categories}>
-        {products.items.slice(0, 4).map((product: any) => (
+        {products.items.filter((product: Product) => product.name).slice(0, 4).map((product: any) => (
             <Link href={`productos/${product.slug}`} key={product.id} className={styles.product} >
               <Image src={product.images[0] || ""} alt={product.name} width={130} height={130} />
               <p title='Marca' className={styles.brand} >{product.brand as any}</p>
