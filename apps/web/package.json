@@ -11,7 +11,7 @@
   "dependencies": {
     "@repo/design-system": "workspace:*",
     "@repo/tools": "workspace:*",
-    "helebba-sdk": "^1.0.29",
+    "helebba-sdk": "^1.0.33",
     "lucide-react": "^0.445.0",
     "mercadopago": "^2.0.15",
     "next": "^14.2.13",

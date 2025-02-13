@@ -9,6 +9,7 @@ import { Shield, TrendingUp } from 'lucide-react';
 
 const Products = async () => {
   const products = await helebba.listProducts() as any;
+  console.log(products)
   return (
     <div className={styles.container}>
       <div className={styles.header} >
