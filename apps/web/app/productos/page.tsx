@@ -6,10 +6,10 @@ import styles from "./Products.module.css";
 import Link from 'next/link';
 import AddToCart from './[slug]/_components/AddToCart';
 import { Shield, TrendingUp } from 'lucide-react';
+import { Product } from 'helebba-sdk';
 
 const Products = async () => {
   const products = await helebba.listProducts() as any;
-  console.log(products)
   return (
     <div className={styles.container}>
       <div className={styles.header} >
@@ -17,7 +17,7 @@ const Products = async () => {
       </div>
       <div className={styles.products} >
 
-        {products.items.map((product: any) => (
+        {products.items.filter((product: Product) => product.name).map((product: any) => (
           <Link key={product.id} href={`productos/${product.slug}`} className={styles.product} >
             <Image src={product.images[0] || ""} alt={product.name} width={130} height={130} />
             <p title='Marca' className={styles.brand} >{product.brand}</p>
