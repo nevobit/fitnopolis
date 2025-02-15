@@ -17,7 +17,7 @@ const Categories = async ({
 }: Props) => {
 
   const listProducts = await helebba.listProducts();
-  const products = listProducts.items.filter((product) => 
+  const products = listProducts?.items?.filter((product) => 
     product.categories.some((category) => 
         category.name.toLowerCase() === params.slug.toLowerCase()
     )
@@ -27,7 +27,7 @@ const Categories = async ({
     <div className={styles.container} >
       <h1> {products[0]?.categories[0]?.name || "Sin resultados"} </h1>
       <div className={styles.products}>
-        {products.map((product: any) => (
+        {products?.map((product: any) => (
               <Link href={`/productos/${product.slug}`} key={product.id} className={styles.product} >
                 <Image src={product.images[0] || ""} alt={product.name} width={130} height={130} />
                 <p title='Marca' className={styles.brand} >{product.brand}</p>
